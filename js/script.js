@@ -29,13 +29,22 @@ calcForm.addEventListener('submit', function (e) {
    // }
 
    // // another strategy is to use a switch statement (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
-   // switch (operation.value) {
-   //    case 'add':
-   //       calculatorResult = firstNumber + secondNumber;
-   //       break;
-   //    default:
-   //       calculatorResult = 0;
-   // }
+   switch (operation.value) {
+      case 'add':
+         calculatorResult = firstNumber + secondNumber;
+         break;
+      default:
+         calculatorResult = 0;
+      case 'minus':
+         calculatorResult = firstNumber - secondNumber;
+         break;
+      case 'multiply':
+         calculatorResult = firstNumber * secondNumber;
+         break;
+      case 'divide':
+         calculatorResult = firstNumber / secondNumber;
+   }
+
 
    result.value = calculatorResult;
 });
